@@ -175,28 +175,3 @@ class Char:
     angstrom: str = "\u212b"
     wavelength_micron: str = "Wavelength (\u03bcm)"
     energy_microjoule: str = "Energy (\u03bcJ)"
-
-import matplotlib.pyplot as plt
-import matplotlib.pyplot as plt
-import numpy as np
-
-# Set style BEFORE plotting
-set_style(theme="nick_dark", font_size=14)
-
-# Data
-x = np.linspace(0, 10, 100)
-y = [i**2 for i in x]
-z = [i*3 + 1 for i in x]
-
-# Create subplots
-fig, axis = plt.subplots(1, 2, figsize=(12, 6))
-
-# Plot
-axis[0].plot(x, y)
-axis[1].plot(x, z)
-
-# Label each plot explicitly — no empty figures this way
-label_letter("a", axis=axis[0], style="Nature")
-label_letter("b", axis=axis[1], style="Nature")
-
-plt.show()
